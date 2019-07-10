@@ -21,6 +21,8 @@ Metric | Value
 Loss | 0.00343
 Reward |19.9
 
+![image](https://user-images.githubusercontent.com/26214809/60944052-9599e700-a29c-11e9-8b95-062746288377.png)
+![image](https://user-images.githubusercontent.com/26214809/60944065-9df22200-a29c-11e9-9ee2-1606c74bf8ff.png)
 ## Visualizing the training of the model
 I took 1000 frames sequentially on which model is trained. Then, I took my trained model (trained on above parameter), and removed the last layer of Neural network. Then, I got a tensor of dimension 1000 X 512. In order to plot this and realize how the training happens in model, dimensionality reduction needs to be done. I first tried PCA for that and then ultimately used t-sne (as results from PCA were not good and I didn’t get meaningful clusters).
 The side information used by me is action taken and the state (that is state of board at that time). So, in the plot shown, points are basically 2-dimensional reduction of 1000 X 512 features. And color is based on the action chosen by model (for that particular state in the model). Then, three groups of frames are selected. First few frames from start of training, then second set consists of some frames just before the end of game (that is when done is true) and third set is some frames in the middle of training. These frames are chosen from the above 1000 frames only. As evident from plot, each set is clustered together. Also, I have plotted state of each of the frames selected (in 3 sets) and frames of same set, that is , frames which are close by are similar in their state of board.
