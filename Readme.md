@@ -6,14 +6,17 @@ There are various parameters that could be trained to get the optimum result (th
 
 The following parameters gave me best results:
 
-num_frames | 2000000
+Parameter | Value 
 |--------|-------|
+num_frames | 2000000
 Batch_size | 32
 Gamma | 0.98
 Replay_initial |	9200
 Replay buffer length |	160000
 
 The best result that my model could reach is as follows:
+Metric | Value
+|------|------|
 Loss | 0.00343
 Reward |19.9
 
