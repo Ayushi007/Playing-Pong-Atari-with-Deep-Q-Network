@@ -27,8 +27,12 @@ Reward |19.9
 I took 1000 frames sequentially on which model is trained. Then, I took my trained model (trained on above parameter), and removed the last layer of Neural network. Then, I got a tensor of dimension 1000 X 512. In order to plot this and realize how the training happens in model, dimensionality reduction needs to be done. I first tried PCA for that and then ultimately used t-sne (as results from PCA were not good and I didn’t get meaningful clusters).
 The side information used by me is action taken and the state (that is state of board at that time). So, in the plot shown, points are basically 2-dimensional reduction of 1000 X 512 features. And color is based on the action chosen by model (for that particular state in the model). Then, three groups of frames are selected. First few frames from start of training, then second set consists of some frames just before the end of game (that is when done is true) and third set is some frames in the middle of training. These frames are chosen from the above 1000 frames only. As evident from plot, each set is clustered together. Also, I have plotted state of each of the frames selected (in 3 sets) and frames of same set, that is , frames which are close by are similar in their state of board.
 The manifold are not very smooth in the visualization. This is due to the fact that the model diverge a lot in Q-learning to explore more and doesn’t follow a fixed path. Also, maintaining a memory buffer, ensure that the next state are chosen at random and thus, due to this randomized pattern, manifold is not smooth. But, we can see that same type of board state and same type of actions are clustered together (as evident from side information).
-Color: Based on action chosen (from 6 possible action set)
+Color: Based on action chosen (from 6 possible action set) 
+
 Board drawn for each action chosen
+
+
+![image](https://user-images.githubusercontent.com/26214809/60944202-017c4f80-a29d-11e9-8e0e-2362d037ef0f.png)
 
 
 Visualization of Trained Model
