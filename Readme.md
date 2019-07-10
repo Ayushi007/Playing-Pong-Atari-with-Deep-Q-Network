@@ -15,6 +15,7 @@ Replay_initial |	9200
 Replay buffer length |	160000
 
 The best result that my model could reach is as follows:
+
 Metric | Value
 |------|------|
 Loss | 0.00343
