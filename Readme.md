@@ -5,15 +5,16 @@ The model needs to be trained to optimize two values: loss and reward of the gam
 There are various parameters that could be trained to get the optimum result (that is loss and reward of game). Our ultimate goal of Deep Q-learning to train the Atari game to maximize the reward with respect to one player.
 
 The following parameters gave me best results:
-num_frames- 2000000
-Batch_size- 32
-Gamma- 0.98
-Replay_initial-	9200
-Replay buffer length-	160000
+
+num_frames | 2000000
+Batch_size | 32
+Gamma | 0.98
+Replay_initial |	9200
+Replay buffer length |	160000
 
 The best result that my model could reach is as follows:
-Loss-	0.00343
-Reward-	19.9
+Loss | 0.00343
+Reward |19.9
 
 ## Visualizing the training of the model
 I took 1000 frames sequentially on which model is trained. Then, I took my trained model (trained on above parameter), and removed the last layer of Neural network. Then, I got a tensor of dimension 1000 X 512. In order to plot this and realize how the training happens in model, dimensionality reduction needs to be done. I first tried PCA for that and then ultimately used t-sne (as results from PCA were not good and I didn’t get meaningful clusters).
